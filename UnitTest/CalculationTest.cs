@@ -10,7 +10,7 @@ namespace Test.UnitTest
     {
  
         [TestMethod]
-        public void TestMethod1()
+        public void Add_TheREsultIsEqual_ReturnSameNumber()
         {
             Calculator calculator = new Calculator();
             //Arrange 
@@ -25,7 +25,7 @@ namespace Test.UnitTest
         }
         [TestMethod]
         [ExpectedException(typeof(Exception))]
-        public  void CaluclationIfOPisnotExist()
+        public  void CaluclationIfOPisnotExist_Multiply_ReturnExcption()
         {
             Calculator calculator = new Calculator();
             //Arrange 
