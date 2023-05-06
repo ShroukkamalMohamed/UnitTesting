@@ -1,4 +1,4 @@
-﻿ using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TestProj;
 
@@ -8,26 +8,26 @@ namespace Test.UnitTest
     [TestClass]
     public class CalculationTest
     {
- 
+        Calculator calculator = new Calculator();
+
         [TestMethod]
-        public void Add_TheREsultIsEqual_ReturnSameNumber()
+        public void Add_SumOfTwoNumbers_ReturnCorrectSum()
         {
-            Calculator calculator = new Calculator();
             //Arrange 
             calculator.FristNumber = 20;
             calculator.SecNumber = 25;
             calculator.OperationType = "Add";
             // Act 
             int Result = calculator.Calucluation();
-            int expectedNumber =45;
+            int expectedNumber = 45;
             // Assert 
             Assert.AreEqual(Result, expectedNumber);
         }
+        //Exceptions ..
         [TestMethod]
         [ExpectedException(typeof(Exception))]
-        public  void CaluclationIfOPisnotExist_Multiply_ReturnExcption()
+        public void CaluclationIfOPisnotExist_Multiply_ReturnExcption()
         {
-            Calculator calculator = new Calculator();
             //Arrange 
             calculator.FristNumber = 20;
             calculator.SecNumber = 25;

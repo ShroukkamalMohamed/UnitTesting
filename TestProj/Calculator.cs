@@ -25,6 +25,10 @@ namespace TestProj
 
             }
         }
+        public int MaxNumber(int FristNumber , int SecNumber )
+        {
+            return (FristNumber > SecNumber) ? FristNumber : SecNumber; 
+        }
 
     }
 }
