@@ -27,6 +27,7 @@ namespace Test.UnitTest
             // Assert 
             Assert.That(Result, Is.EqualTo(expectedNumber));
         }
+
         //TestCases..
         [Test]
         [TestCase(2, 1, 2)]
@@ -36,6 +37,7 @@ namespace Test.UnitTest
             int Result = calculator.MaxNumber(FristNumber, SecNumber);
             Assert.AreEqual(Result, ExpectedNumber);
         }
+
         //Ignore Test..
         [Ignore("Ignore Test..")]
         [Test]
@@ -43,16 +45,29 @@ namespace Test.UnitTest
         {
         }
 
-        // test a List 
+        //Test a List.. 
         [Test]
-        public void OddNumber_Number_GetOddNumberlessThanNumber()
+        public void EvenNumber_Number_GetOddNumberlessThanNumber()
         {
-            var Result = calculator.OddNumbers(6);
+            var Result = calculator.GetlistOFEvenNumbers(6);
             // Assert.That(Result, Is.Empty);
             Assert.That(Result.Contains(2));
             Assert.That(Result.Contains(4));
             Assert.That(Result.Contains(0));
 
+            Assert.That(Result, Is.EquivalentTo(new[] { 0, 2, 4 }));
+
+        }
+
+        //Throw Expection..
+        [Test]
+        public void CalculationMethod_MultplyOperatio_ReturnExpetion()
+        {
+            calculator.OperationType = "Multply";
+            calculator.FristNumber = 1;
+            calculator.SecNumber = 2;
+
+            Assert.That(() => calculator.Calucluation(), Throws.Exception);
         }
     }
 

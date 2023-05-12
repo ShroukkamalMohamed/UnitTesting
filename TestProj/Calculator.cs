@@ -29,7 +29,7 @@ namespace TestProj
         {
             return (FristNumber > SecNumber) ? FristNumber : SecNumber;
         }
-        public IEnumerable<int> OddNumbers(int Number)
+        public IEnumerable<int> GetlistOFEvenNumbers(int Number)
         {
             List<int> Numblst = new List<int>();
             for (int i = 0; i < Number; i++)

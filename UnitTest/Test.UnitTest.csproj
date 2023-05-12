@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculationTest.cs" />
+    <Compile Include="Exercises\FizzBuzz.cs" />
+    <Compile Include="Exercises\PointsCaluculatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestIntitialize.cs" />
     <Compile Include="TestUsingNUnitFramework.cs" />
