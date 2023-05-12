@@ -25,10 +25,21 @@ namespace TestProj
 
             }
         }
-        public int MaxNumber(int FristNumber , int SecNumber )
+        public int MaxNumber(int FristNumber, int SecNumber)
         {
-            return (FristNumber > SecNumber) ? FristNumber : SecNumber; 
+            return (FristNumber > SecNumber) ? FristNumber : SecNumber;
         }
-
+        public IEnumerable<int> OddNumbers(int Number)
+        {
+            List<int> Numblst = new List<int>();
+            for (int i = 0; i < Number; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Numblst.Add(i);    
+                }
+            }
+            return Numblst;
+        }
     }
 }

@@ -42,6 +42,18 @@ namespace Test.UnitTest
         public void IgnoreTest()
         {
         }
+
+        // test a List 
+        [Test]
+        public void OddNumber_Number_GetOddNumberlessThanNumber()
+        {
+            var Result = calculator.OddNumbers(6);
+            // Assert.That(Result, Is.Empty);
+            Assert.That(Result.Contains(2));
+            Assert.That(Result.Contains(4));
+            Assert.That(Result.Contains(0));
+
+        }
     }
 
 }
